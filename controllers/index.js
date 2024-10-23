@@ -1,0 +1,1 @@
+export * from "./libs/product-controller.js"
