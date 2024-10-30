@@ -5,6 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon .",
+    "dev:migration:run": "npx sequelize-cli db:migrate",
+    "dev:migration:undo": "npx sequelize-cli db:migrate:undo",
+    "dev:seed:run": "npx sequelize-cli db:seed:all",
+    "dev:seed:undo": "npx sequelize-cli db:seed:undo:all",
     "start": "node ."
   },
   "author": "kumar",

@@ -1,18 +1,16 @@
-import { Product, User} from "../../database/models/index.js";
+import {Product} from "../../database/models/index.js";
 
-const productController = async (req, res) => {
+const product = async (req, res) => {
   try {
-    const response = await User.create({
-      userName: "kumar",
-      address: "Pali",
-      phoneNumber: 7340046539,
-    });
-    res.status(201).send("Data Inserted successfully");
-    console.log(`Data Inserted successfully${response.userName}`)
+    const {id} = req.params;
+    const result = await Product.findByPk(id);
+    if(result == null){
+    }else{
+      res.status(200).message(JSON.stringify(result));
+    }
   } catch (error) {
-    res.send("Unable to insert data");
-    console.error(error);
+    console.log("Problem with product fetching by id, ", error);
   }
-};
+}
 
-export {productController}
+export {product}

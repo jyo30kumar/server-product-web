@@ -1,7 +1,6 @@
 import { DataTypes } from "sequelize";
 import { db } from "../../../config/db-config.js";
-import { SubCategory } from "./subCategory-model.js";
-import { Category } from "./category-model.js";
+import { Category, SubCategory } from "../index.js";
 
 const Product = db.define("products", {
   productId: {

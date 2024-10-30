@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const DB_NAME_DEV = process.env.DB_NAME_DEV;
 const DB_USERNAME_DEV = process.env.DB_USERNAME_DEV;
 const DB_PASSWORD_DEV = process.env.DB_PASSWORD_DEV;

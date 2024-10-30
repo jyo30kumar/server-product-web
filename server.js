@@ -26,7 +26,7 @@ const connectDB = async ()=>{
 connectDB();
 
 //app routes
-app.use("/", router.productRouter);
+app.use("/api", router.productRouter);
 
 // app listening
 app.listen(port, ()=>{
